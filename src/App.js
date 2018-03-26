@@ -2,6 +2,7 @@ import React, {
   Component
 } from 'react';
 import './App.css';
+import { Route } from 'react-router-dom';
 
 import LoginPage from './pages/Login';
 import HomePage from './pages/Home';
@@ -14,11 +15,12 @@ class App extends Component {
     return (
       <div>
         <Navigation />
-        <HomePage />
+        <Route path='/login' component={LoginPage} />
+        {/* <HomePage />
         <hr/>
         <LoginPage />
         <hr/>
-        <SignupPage />
+        <SignupPage /> */}
       </div>
     );
   }

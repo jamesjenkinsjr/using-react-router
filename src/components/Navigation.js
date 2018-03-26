@@ -1,5 +1,6 @@
 import React  from 'react';
 import './Navigation.css';
+import { Link } from 'react-router-dom';
 
 const Navigation = props => (
     <nav className='navbar'>
@@ -11,7 +12,7 @@ const Navigation = props => (
                 <a href="#">Signup</a>
             </li>
              <li className='nav-item'>
-                <a href="#">Login</a>
+                <Link to="/login">Login</Link>
             </li>
         </ul>
     </nav>
