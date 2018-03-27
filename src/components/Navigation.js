@@ -2,6 +2,7 @@ import React  from 'react';
 import './Navigation.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { logout } from '../store';
 
 const Navigation = props => (
     <nav className='navbar'>
@@ -16,7 +17,7 @@ const Navigation = props => (
                 <Link to="/login">Login</Link>
             </li>
             <li className='nav-item' style={{display: props.isLoggedIn ? 'flex' : 'none'}}>
-                <Link to="/login">Logout</Link>
+                <Link to="/login" onClick={() => props.logout()}>Logout</Link>
             </li>
         </ul>
     </nav>
@@ -27,6 +28,6 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-    dispatch
+    logout: () => dispatch(logout()),
 })
 export default connect(mapStateToProps, mapDispatchToProps)(Navigation);
