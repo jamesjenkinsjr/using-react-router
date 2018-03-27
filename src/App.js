@@ -12,12 +12,15 @@ import Navigation from './components/Navigation';
 
 class App extends Component {
   render() {
+    const { match, location, history } = this.props;
+
     return (
       <div>
         <Navigation />
         <Route path='/login' component={LoginPage} />
         <Route path='/signup' component={SignupPage} />
         <Route path='/home' component={HomePage} />
+        <button onClick={() => history.push('/login')}>Go!</button>
         {/* <HomePage /> 
         <hr/>
         <LoginPage />
