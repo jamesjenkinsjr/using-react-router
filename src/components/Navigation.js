@@ -9,7 +9,7 @@ const Navigation = props => (
                 <a href="#">Home</a>
             </li>
             <li className='nav-item'>
-                <a href="#">Signup</a>
+                <Link to="/signup">Sign Up</Link>
             </li>
              <li className='nav-item'>
                 <Link to="/login">Login</Link>
