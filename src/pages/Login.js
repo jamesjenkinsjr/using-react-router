@@ -8,7 +8,10 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={e => e.preventDefault()}>
+                <form onSubmit={e => {
+                    e.preventDefault();
+                    this.props.login('admin','password')
+                }}>
                     <h2>Login:</h2>
                     <div>
                         <input type="email" placeholder="Email..." required />
@@ -16,7 +19,7 @@ class Login extends Component {
                     <div>
                         <input type="password" placeholder="Password..." required />
                     </div>
-                    <button>Login</button>
+                    <button onClick={''}>Login</button>
 
                 </form>
             </div>
