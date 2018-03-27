@@ -17,10 +17,9 @@ class App extends Component {
     return (
       <div>
         <Navigation />
-        <Route path='/login' component={LoginPage} />
+        <Route path='/' exact component={HomePage} />
         <Route path='/signup' component={SignupPage} />
-        <Route path='/home' component={HomePage} />
-        <button onClick={() => history.push('/login')}>Go!</button>
+        <Route path='/login' component={LoginPage} />
         {/* <HomePage /> 
         <hr/>
         <LoginPage />
