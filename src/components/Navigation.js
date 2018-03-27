@@ -9,11 +9,14 @@ const Navigation = props => (
             <li className='nav-item'>
                 <Link to="/">Home</Link>
             </li>
-            <li className='nav-item'>
+            <li className='nav-item' style={{display: props.isLoggedIn ? 'none' : 'flex'}}>
                 <Link to="/signup">Sign Up</Link>
             </li>
-             <li className='nav-item'>
+             <li className='nav-item' style={{display: props.isLoggedIn ? 'none' : 'flex'}}>
                 <Link to="/login">Login</Link>
+            </li>
+            <li className='nav-item' style={{display: props.isLoggedIn ? 'flex' : 'none'}}>
+                <Link to="/login">Logout</Link>
             </li>
         </ul>
     </nav>
